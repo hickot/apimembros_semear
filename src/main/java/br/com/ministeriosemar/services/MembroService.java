@@ -1,5 +1,6 @@
 package br.com.ministeriosemar.services;
 
+import java.lang.System.Logger;
 import java.time.Instant;
 import java.util.UUID;
 
@@ -102,6 +103,8 @@ public class MembroService {
 		//buscar o usuário no banco de dados através do email e da senha
 		Membro membro = membrosRepository.find(
 				request.getEmail(), Sha1CryptoHelper.get(request.getSenha()));
+		
+		System.err.println("EMAIL: " + request.getEmail() + "| SENHA: " + request.getSenha() );
 		
 		if (membro != null) {
 			
