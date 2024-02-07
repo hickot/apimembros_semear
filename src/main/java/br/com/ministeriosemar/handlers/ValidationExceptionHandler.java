@@ -36,6 +36,11 @@ public class ValidationExceptionHandler extends ResponseEntityExceptionHandler {
 			dto.getErrors().add(error.getObjectName() + ": " + error.getDefaultMessage());
 		}
 
+		System.out.println("");
+		System.out.println("---CLASSE ValidationExceptionHandler---");
+		System.out.println("ERRO: " + dto.getErrors());
+		System.out.println("");
+		
 		// retornando o conteudo dos erros
 		return handleExceptionInternal(ex, dto, headers, dto.getStatus(), request);
 	}
