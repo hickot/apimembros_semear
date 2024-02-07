@@ -104,7 +104,7 @@ public class MembroService {
 				request.getEmail(), Sha1CryptoHelper.get(request.getSenha()));
 		
 		System.out.println("");
-		System.out.println("EMAIL: " + request.getEmail() + "| SENHA: " + request.getSenha() );
+		System.out.println("EMAIL: " + request.getEmail() + " | SENHA: " + request.getSenha() );
 		System.out.println("");
 		
 		if (membro != null) {
