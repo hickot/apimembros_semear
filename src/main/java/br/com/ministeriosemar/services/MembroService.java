@@ -97,7 +97,7 @@ public class MembroService {
 	/*
 	 * Método para autenticar o usuário
 	 */
-	public AutenticarMembroResponseDto autenticarUsuario(AutenticarMembroRequestDto request) throws IllegalAccessException {
+	public AutenticarMembroResponseDto autenticarUsuario(AutenticarMembroRequestDto request) {
 		
 		//buscar o usuário no banco de dados através do email e da senha
 		Membro membro = membrosRepository.find(
@@ -122,7 +122,7 @@ public class MembroService {
 			return response;
 		}
 		
-		throw new IllegalAccessException("Acesso negado. Usuário inválido!");
-		//throw new IllegalArgumentException("Acesso negado. Usuário inválido!");
+		//throw new IllegalAccessException("Acesso negado. Usuário inválido!");
+		throw new IllegalArgumentException("Acesso negado. Usuário inválido!");
 	}
 }
