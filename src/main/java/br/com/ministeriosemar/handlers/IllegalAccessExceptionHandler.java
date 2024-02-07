@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import br.com.ministeriosemar.dtos.ErrorResponseDto;
 
 @ControllerAdvice
-public class IllegalArgumentExceptionHandler {
-	@ExceptionHandler(IllegalArgumentException.class) // erro que será capturado
-	@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class IllegalAccessExceptionHandler {
+	@ExceptionHandler(IllegalAccessException.class) // erro que será capturado
+	@ResponseStatus(HttpStatus.FORBIDDEN)
 	@ResponseBody
 	
-	public ErrorResponseDto handleIllegalArgumentException(IllegalArgumentException e) {
+	public ErrorResponseDto handleIllegalAccessException(IllegalAccessException e) {
 		
 		ErrorResponseDto response = new ErrorResponseDto();
 		
@@ -32,7 +32,7 @@ public class IllegalArgumentExceptionHandler {
 		 * }
 		 */
 		
-		response.setStatus(HttpStatus.BAD_REQUEST);
+		response.setStatus(HttpStatus.FORBIDDEN);
 		response.setErrors(new ArrayList<String>());
 		response.getErrors().add(e.getMessage());
 		

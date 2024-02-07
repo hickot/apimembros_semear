@@ -39,7 +39,7 @@ public class MembroController {
 	 * ENDPOINT POST: /api/usuario/autenticar
 	 */
 	@PostMapping("autenticar")
-	public AutenticarMembroResponseDto autenticarUsuario(@RequestBody @Valid AutenticarMembroRequestDto request) {
+	public AutenticarMembroResponseDto autenticarUsuario(@RequestBody @Valid AutenticarMembroRequestDto request) throws IllegalAccessException {
 		
 		//executando o serviço de autenticação de usuário e devolvendo o retorno
 		return membroService.autenticarUsuario(request);
