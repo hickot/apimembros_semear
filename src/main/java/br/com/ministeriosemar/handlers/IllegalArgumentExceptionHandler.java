@@ -19,7 +19,10 @@ public class IllegalArgumentExceptionHandler {
 		
 		ErrorResponseDto response = new ErrorResponseDto();
 		
+		System.out.println("");
+		System.out.println("---CLASSE IllegalArgumentExceptionHandler---");
 		System.out.println("STRING DO ERRO: " + e.getMessage());
+		System.out.println("");
 		
 		/*
 		 * if (e.getMessage() != null &&

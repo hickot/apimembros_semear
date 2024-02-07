@@ -19,7 +19,10 @@ public class IllegalAccessExceptionHandler {
 		
 		ErrorResponseDto response = new ErrorResponseDto();
 		
+		System.out.println("");
+		System.out.println("---CLASSE IllegalAccessExceptionHandler---");
 		System.out.println("STRING DO ERRO: " + e.getMessage());
+		System.out.println("");
 		
 		/*
 		 * if (e.getMessage() != null &&
